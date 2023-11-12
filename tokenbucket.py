@@ -3,7 +3,6 @@ import time
 
 # There is a ‘bucket’ that has capacity for N tokens. A bucket per user or IP address
 BUCKET_CAP = 10
-REQUEST_PER_SEC = 20
 ips = {}
 
 
