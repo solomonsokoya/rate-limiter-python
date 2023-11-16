@@ -11,13 +11,13 @@ class TestTokenBucketApp(unittest.TestCase):
 		ip = "127.0.0.1"  # Replace with a valid IP address.
 		
 		for _ in range(11):
-			response = client.get('/limitedtb', headers={'x-test-ip': ip})
+			response = client.get('/token-bucket', headers={'x-test-ip': ip})
 			res.append(response.status_code)
 
 		ip2 = "128.0.0.1"  # Replace with a valid IP address.
 		
 		for _ in range(8):
-			response = client.get('/limitedtb', headers={'x-test-ip': ip2})
+			response = client.get('/token-bucket', headers={'x-test-ip': ip2})
 			res.append(response.status_code)
 		
 		self.assertEqual(res.count(200), 18)
