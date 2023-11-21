@@ -1,7 +1,7 @@
 import unittest
 from flask import Flask
 from app import app
-from tokenbucket import Token_Bucket, ips
+from algos.token_bucket import Token_Bucket, ips
 import time
 
 class TestTokenBucketApp(unittest.TestCase):
